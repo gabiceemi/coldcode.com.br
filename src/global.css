@@ -1,0 +1,25 @@
+:root {
+  --primary-color: #039c8f;
+  --primary-color-hover: #00685f;
+  --secondary-color: #ffffff;
+  --bg-light: #ffffff;
+  --text-dark: #222222;
+  --text-muted: #666666;
+
+  --font-main: 'Courier New', Courier, monospace;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --shadow-light: 0 4px 10px rgba(0, 0, 0, 0.08);
+  --shadow-heavy: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--text-dark);
+  background-color: var(--bg-light);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
