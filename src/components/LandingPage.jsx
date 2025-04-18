@@ -1,10 +1,47 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './LandingPage.css';
 
+import { Code, Smartphone, Link, Lightbulb, LifeBuoy, Workflow } from "lucide-react";
+
+const services = [
+  { text: "Desenvolvimento de sistemas personalizados", icon: <Code /> },
+  { text: "Aplicações web e mobile", icon: <Smartphone /> },
+  { text: "Integrações com APIs e sistemas legados", icon: <Link /> },
+  { text: "Consultoria em tecnologia e inovação", icon: <Lightbulb /> },
+  { text: "Suporte e manutenção de software", icon: <LifeBuoy /> },
+  { text: "Aplicação de metodologias ágeis", icon: <Workflow /> }
+];
+
 export default function LandingPage() {
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    });
+
+    document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
+
+    const el = document.querySelector(".typing-animation");
+    if (el) {
+      const text = el.textContent;
+      el.textContent = '';
+      let i = 0;
+      const type = () => {
+        if (i < text.length) {
+          el.textContent += text.charAt(i);
+          i++;
+          setTimeout(type, 50);
+        }
+      };
+      type();
+    }
+  }, []);
+
   return (
     <div className="landing-page">
-      {/* Navbar */}
       <header className="navbar">
         <div className="header">
           <img src="/logo.png" alt="Logo da Cold Code" className="logo" />
@@ -16,21 +53,17 @@ export default function LandingPage() {
           <a href="#clientes">Clientes</a>
           <a href="#contato">Contato</a>
         </nav>
-
         <button className="menu-toggle" onClick={() => {
           document.querySelector('.nav-links').classList.toggle('active');
         }}>
-          <div></div>
-          <div></div>
-          <div></div>
+          <div></div><div></div><div></div>
         </button>
       </header>
 
       <main className="content">
-        {/* Home */}
-        <section id="home" className="section home-section">
+        <section id="home" className="section home-section fade-in">
           <div className="home-content">
-            <h2 className="title">Se dá pra imaginar, a gente programa.</h2>
+            <h2 className="title typing-animation">Se dá pra imaginar, a gente programa.</h2>
             <p>Soluções digitais inteligentes para acelerar o crescimento da sua empresa com performance, escalabilidade e inovação.</p>
             <blockquote className="quote">
               Ideias são o software que roda no hardware da nossa mente.
@@ -43,75 +76,92 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* Sobre */}
-        <section id="sobre" className="section about-section">
+        <section id="sobre" className="section fade-in">
           <h2 className="section-title">Quem Somos</h2>
-          <p>A <strong>Cold Code Ltda</strong> é uma empresa especializada no desenvolvimento de soluções digitais sob medida que impulsionam a transformação tecnológica de negócios.</p>
-          <p>Com sede em Criciúma/SC, atuamos com foco em <strong>performance, escalabilidade e experiência do usuário</strong>. Desenvolvemos sistemas robustos e personalizados, preparados para crescer junto com nossos clientes.</p>
-          <p>Combinamos <strong>expertise técnica</strong>, <strong>metodologias ágeis</strong> e <strong>visão estratégica</strong> para entregar softwares de alta qualidade, com prazos consistentes, total transparência e foco em resultados reais.</p>
+          <p>
+            A <strong>Cold Code</strong> nasceu da vontade de transformar ideias em experiências digitais de <strong>impacto</strong>.
+            Não foi só uma decisão de empreender com tecnologia — foi um chamado pra <strong>criar</strong>, <strong>melhorar</strong> e <strong>facilitar a vida</strong> das pessoas com soluções que realmente fazem sentido.
+          </p>
+          <br></br>
+          <p>
+            A gente acredita que todo bom projeto começa com uma <strong>boa conversa</strong>. Antes de escrever qualquer linha de código, <strong>escutamos</strong>. <strong>Entendemos</strong>. Questionamos. Só depois partimos pro teclado — com <strong>estratégia</strong>, <strong>propósito</strong> e uma xícara de café por perto.
+          </p>
+          <br></br>
+          <p>
+            Nosso time é movido por <strong>desafios</strong> e pela <strong>curiosidade constante</strong>. Somos aquelas pessoas que adoram resolver problemas, testar ideias, aprender coisa nova e transformar <strong>complexidade em simplicidade</strong>. Se algo pode ser feito de um jeito melhor, mais rápido ou mais bonito, a gente vai querer descobrir como.
+          </p>
+          <br></br>
+          <p>
+            Mais do que entregar software, queremos construir <strong>relações duradouras</strong>. Trabalhamos com <strong>transparência</strong>, <strong>prazos reais</strong> e aquela sensação boa de <strong>“pode deixar que a gente resolve”</strong>.
+            Porque no fim das contas, <strong>tecnologia</strong> é só a ferramenta — o que importa mesmo é <strong>o que ela é capaz de criar</strong>.
+          </p>
         </section>
 
-        {/* Serviços */}
-        <section id="servicos" className="section">
+        <section id="services" className="section fade-in">
           <h2 className="section-title">Nossos Serviços</h2>
-          <div className="grid">
-            {["Desenvolvimento de sistemas personalizados",
-              "Aplicações web e mobile",
-              "Integrações com APIs e sistemas legados",
-              "Consultoria em tecnologia e inovação",
-              "Suporte e manutenção de software",
-              "Aplicação de metodologias ágeis (Scrum, Kanban)"
-            ].map((servico, idx) => (
-              <div key={idx} className="card">{servico}</div>
+          <div className="services-grid">
+            {services.map((service, idx) => (
+              <div key={idx} className="card-service">
+                <div className="icon">{service.icon}</div>
+                <p>{service.text}</p>
+              </div>
             ))}
           </div>
         </section>
 
-        {/* Clientes */}
-        <section id="clientes" className="section">
+        <section id="clients" className="section fade-in">
           <h2 className="section-title">Clientes</h2>
-          <div className="grid">
-            <div className="client-project">
-              <div className="project-images">
-                <img src="/images/live-desktop.jpeg" alt="Versão desktop do site LIVE!" className="project-image" />
-              </div>
-              <div className="project-description">
+          <div className="project-grid">
+            <a
+              href="https://www.liveoficial.com.br"
+              className="client-card"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/images/live-desktop.jpeg"
+                alt="LIVE! site"
+                className="project-image"
+              />
+              <div className="project-info">
                 <h3>LIVE! Moda Fitness</h3>
                 <p>
-                  A Cold Code atuou no desenvolvimento de soluções digitais para a LIVE!, contribuindo com tecnologias robustas e estratégias eficientes.
-                  Entregamos um sistema de checkout 3.0, integração de estoque físico, métodos de pagamento personalizados e projetos inovadores, como soluções omnichannel e integrações de entrega em tempo real.
+                  A Cold Code atuou no desenvolvimento de soluções digitais para a
+                  LIVE!, com checkout 3.0, integração de estoque, pagamentos
+                  personalizados, soluções omnichannel e entrega em tempo real.
                 </p>
-                <p><strong>Tecnologias usadas:</strong> React, Laravel, Redis, Docker, PostgreSQL, MySQL, PHP.</p>
               </div>
-            </div>
-            <div className="client-project">
-              <div className="project-images">
-                <img
-                  src="/images/papaya-desktop.jpeg"
-                  alt="Site institucional Brasil Papaya"
-                  className="project-image"
-                />
-              </div>
-              <div className="project-description">
+            </a>
+
+            <a
+              href="https://brasilpapaya.com.br"
+              className="client-card"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/images/papaya-desktop.jpeg"
+                alt="Brasil Papaya site"
+                className="project-image"
+              />
+              <div className="project-info">
                 <h3>Brasil Papaya</h3>
                 <p>
-                  Criamos o site institucional da <strong>Brasil Papaya</strong>, com foco em performance e acessibilidade.
-                  Também desenvolvemos um app exclusivo de afinador de notas para os músicos da banda, com design intuitivo e suporte multiplataforma.
+                  Criamos o site institucional da <strong>Brasil Papaya</strong>, com
+                  foco em performance e acessibilidade. Também desenvolvemos um app
+                  exclusivo de afinador de notas para os músicos da banda, com design
+                  intuitivo e suporte multiplataforma.
                 </p>
-                <a href="https://www.brasilpapaya.com.br" target="_blank" rel="noreferrer">
-                  brasilpapaya.com.br
-                </a>
               </div>
-            </div>
+            </a>
           </div>
         </section>
 
-        {/* Contato */}
-        <section id="contato" className="section">
+        <section id="contato" className="section fade-in">
           <h2 className="section-title">Fale com a gente</h2>
           <p>Estamos prontos para entender suas necessidades e desenvolver a solução ideal para o seu negócio.</p>
           <div className="contact-info">
-            <p>Criciúma - SC</p>
+            <p>Santa Catarina</p>
             <p>@coldcodeltda</p>
             <p>(47) 92002-0928</p>
             <p>www.coldcode.com.br</p>
@@ -119,7 +169,6 @@ export default function LandingPage() {
         </section>
       </main>
 
-      {/* Footer */}
       <footer className="footer">
         © {new Date().getFullYear()} Cold Code Ltda. Todos os direitos reservados.
       </footer>

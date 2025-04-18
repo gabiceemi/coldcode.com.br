@@ -14,12 +14,46 @@
   --shadow-heavy: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-body {
-  font-family: var(--font-main);
-  color: var(--text-dark);
-  background-color: var(--bg-light);
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background: #f9f9f9;
+  color: #333;
   line-height: 1.6;
   scroll-behavior: smooth;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  color: #222;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  outline: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 2rem;
 }
