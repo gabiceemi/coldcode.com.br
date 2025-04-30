@@ -45,7 +45,6 @@ export default function LandingPage() {
       <header className="navbar">
         <div className="header">
           <img src="/logo.png" alt="Logo da Cold Code" className="logo" />
-          <h1>Cold Code Ltda</h1>
         </div>
         <nav className="nav-links">
           <a href="#sobre">Sobre</a>
@@ -63,13 +62,9 @@ export default function LandingPage() {
       <main className="content">
         <section id="home" className="section home-section fade-in">
           <div className="home-content">
-            <h2 className="title typing-animation">Se dá pra imaginar, a gente programa.</h2>
-            <p>Soluções digitais inteligentes para acelerar o crescimento da sua empresa com performance, escalabilidade e inovação.</p>
-            <blockquote className="quote">
-              Ideias são o software que roda no hardware da nossa mente.
-              <span className="author">E reflexão é como fazemos deploy de algo melhor.</span>
-            </blockquote>
-            <button className="btn-primary">Solicite uma proposta</button>
+            <h2 className="title typing-animation">Bem-vindo a Cold Code!</h2>
+            <p>Conectando tecnologia e inovação com a essência da Serra Catarinense.</p>
+            <button className="btn-primary">FALE COM UM ESPECIALISTA</button>
           </div>
           <div className="home-image">
             <img src="/images/banner.png" alt="Banner da Cold Code" />
@@ -79,21 +74,15 @@ export default function LandingPage() {
         <section id="sobre" className="section fade-in">
           <h2 className="section-title">Quem Somos</h2>
           <p>
-            A <strong>Cold Code</strong> nasceu da vontade de transformar ideias em experiências digitais de <strong>impacto</strong>.
-            Não foi só uma decisão de empreender com tecnologia — foi um chamado pra <strong>criar</strong>, <strong>melhorar</strong> e <strong>facilitar a vida</strong> das pessoas com soluções que realmente fazem sentido.
+            Na <strong>Cold Code</strong>, somos mais do que uma empresa de tecnologia: somos uma força inovadora com raízes profundas na <strong>Serra Catarinense</strong>. Com sede em <strong>São Joaquim, SC</strong>, uma cidade famosa por suas paisagens geladas e clima rigoroso, nossa inspiração vem do <strong>frio da serra</strong> — assim como a nossa abordagem tecnológica: <strong>sólida</strong>, <strong>precisa</strong> e de <strong>alto impacto</strong>.
           </p>
           <br></br>
           <p>
-            A gente acredita que todo bom projeto começa com uma <strong>boa conversa</strong>. Antes de escrever qualquer linha de código, <strong>escutamos</strong>. <strong>Entendemos</strong>. Questionamos. Só depois partimos pro teclado — com <strong>estratégia</strong>, <strong>propósito</strong> e uma xícara de café por perto.
+            Nossa missão é fornecer soluções personalizadas e de <strong>alta qualidade</strong> para empresas que buscam <strong>evolução</strong> e <strong>inovação</strong>. Oferecemos desde o <strong>desenvolvimento de software sob medida</strong> até <strong>consultoria estratégica</strong>, com um compromisso inabalável com a <strong>excelência</strong>.
           </p>
           <br></br>
           <p>
-            Nosso time é movido por <strong>desafios</strong> e pela <strong>curiosidade constante</strong>. Somos aquelas pessoas que adoram resolver problemas, testar ideias, aprender coisa nova e transformar <strong>complexidade em simplicidade</strong>. Se algo pode ser feito de um jeito melhor, mais rápido ou mais bonito, a gente vai querer descobrir como.
-          </p>
-          <br></br>
-          <p>
-            Mais do que entregar software, queremos construir <strong>relações duradouras</strong>. Trabalhamos com <strong>transparência</strong>, <strong>prazos reais</strong> e aquela sensação boa de <strong>“pode deixar que a gente resolve”</strong>.
-            Porque no fim das contas, <strong>tecnologia</strong> é só a ferramenta — o que importa mesmo é <strong>o que ela é capaz de criar</strong>.
+            <strong>Por que Cold Code?</strong> Assim como o frio da serra exige <strong>resistência</strong> e <strong>adaptação</strong>, a Cold Code traz soluções tecnológicas robustas, pensadas para enfrentar os desafios do mercado digital com <strong>inteligência</strong> e <strong>performance</strong>. Estamos aqui para ajudar sua empresa a se destacar, seja no <strong>desenvolvimento de novos produtos</strong>, na <strong>otimização de processos</strong> ou na construção de um <strong>futuro mais digital</strong>.
           </p>
         </section>
 
