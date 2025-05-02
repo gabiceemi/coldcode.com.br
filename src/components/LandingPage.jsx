@@ -62,31 +62,33 @@ export default function LandingPage() {
       <main className="content">
         <section id="home" className="section home-section fade-in">
           <div className="home-content">
-            <h2 className="title typing-animation">Bem-vindo a Cold Code!</h2>
-            <p>Conectando tecnologia e inovação com a essência da Serra Catarinense.</p>
-            <button className="btn-primary">FALE COM UM ESPECIALISTA</button>
+            <h2 className="title typing-animation">Cold Code Ltda</h2>
+            <p>
+              Automatizamos processos e reduzimos custos com sistemas sob medida, criados para ajudar sua empresa a vender mais, economizar tempo e ter total controle sobre as operações.
+            </p>
+            <button className="btn-primary">Converse com um Especialista</button>
           </div>
           <div className="home-image">
-            <img src="/images/banner.png" alt="Banner da Cold Code" />
+            <img src="/images/banner.png" alt="Cold Code - Tecnologia para empresas" />
           </div>
         </section>
 
         <section id="sobre" className="section fade-in">
           <h2 className="section-title">Quem Somos</h2>
           <p>
-            Na <strong>Cold Code</strong>, somos mais do que uma empresa de tecnologia: somos uma força inovadora com raízes profundas na <strong>Serra Catarinense</strong>. Com sede em <strong>São Joaquim, SC</strong>, uma cidade famosa por suas paisagens geladas e clima rigoroso, nossa inspiração vem do <strong>frio da serra</strong> — assim como a nossa abordagem tecnológica: <strong>sólida</strong>, <strong>precisa</strong> e de <strong>alto impacto</strong>.
+            A <strong>Cold Code</strong> nasceu em <strong>São Joaquim, SC</strong>, no coração da <strong>Serra Catarinense</strong>, inspirada pelo frio intenso e pela força que ele representa. Assim como o clima da nossa terra, somos resilientes, precisos e determinados a entregar tecnologia que realmente faz a diferença.
           </p>
-          <br></br>
+          <br />
           <p>
-            Nossa missão é fornecer soluções personalizadas e de <strong>alta qualidade</strong> para empresas que buscam <strong>evolução</strong> e <strong>inovação</strong>. Oferecemos desde o <strong>desenvolvimento de software sob medida</strong> até <strong>consultoria estratégica</strong>, com um compromisso inabalável com a <strong>excelência</strong>.
+            Com mais de 5 anos de experiência, ajudamos empresas de diferentes setores a simplificar processos, otimizar operações e crescer de forma sustentável. Nossa equipe é especializada em <strong>desenvolvimento de software sob medida</strong>, <strong>automação de processos</strong> e <strong>consultoria estratégica</strong>, sempre com foco em resultados práticos e duradouros.
           </p>
-          <br></br>
+          <br />
           <p>
-            <strong>Por que Cold Code?</strong> Assim como o frio da serra exige <strong>resistência</strong> e <strong>adaptação</strong>, a Cold Code traz soluções tecnológicas robustas, pensadas para enfrentar os desafios do mercado digital com <strong>inteligência</strong> e <strong>performance</strong>. Estamos aqui para ajudar sua empresa a se destacar, seja no <strong>desenvolvimento de novos produtos</strong>, na <strong>otimização de processos</strong> ou na construção de um <strong>futuro mais digital</strong>.
+            Acreditamos que tecnologia de verdade é aquela que resolve problemas reais. Por isso, trabalhamos lado a lado com nossos clientes para entender suas dores e criar soluções robustas, eficientes e preparadas para os desafios do mercado digital.
           </p>
         </section>
 
-        <section id="services" className="section fade-in">
+        <section id="servicos" className="section fade-in">
           <h2 className="section-title">Nossos Serviços</h2>
           <div className="services-grid">
             {services.map((service, idx) => (
@@ -98,7 +100,7 @@ export default function LandingPage() {
           </div>
         </section>
 
-        <section id="clients" className="section fade-in">
+        <section id="clientes" className="section fade-in">
           <h2 className="section-title">Clientes</h2>
           <div className="project-grid">
             <a
@@ -148,12 +150,16 @@ export default function LandingPage() {
 
         <section id="contato" className="section fade-in">
           <h2 className="section-title">Fale com a gente</h2>
-          <p>Estamos prontos para entender suas necessidades e desenvolver a solução ideal para o seu negócio.</p>
-          <div className="contact-info">
-            <p>Santa Catarina</p>
-            <p>@coldcodeltda</p>
-            <p>(47) 92002-0928</p>
-            <p>www.coldcode.com.br</p>
+          <p>Entre em contato e vamos juntos desenvolver a melhor solução para sua empresa.</p>
+            <div className="contact-info">
+              <p>Santa Catarina</p>
+              <a href="https://instagram.com/coldcodeltda" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-instagram"></i> @coldcodeltda
+              </a>
+              <a href="https://wa.me/5547920020928" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-whatsapp"></i> (47) 92002-0928
+              </a>
+              <p>www.coldcode.com.br</p>
           </div>
         </section>
       </main>
