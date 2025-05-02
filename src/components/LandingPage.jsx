@@ -151,21 +151,22 @@ export default function LandingPage() {
         <section id="contato" className="section fade-in">
           <h2 className="section-title">Fale com a gente</h2>
           <p>Entre em contato e vamos juntos desenvolver a melhor solução para sua empresa.</p>
-            <div className="contact-info">
-              <p>Santa Catarina</p>
-              <a href="https://instagram.com/coldcodeltda" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-instagram"></i> @coldcodeltda
-              </a>
-              <a href="https://wa.me/5547920020928" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-whatsapp"></i> (47) 92002-0928
-              </a>
-              <p>www.coldcode.com.br</p>
+          <div className="contact-info">
+            <p>Santa Catarina</p>
+            <a href="https://instagram.com/coldcodeltda" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-instagram"></i> @coldcodeltda
+            </a>
+            <a href="https://wa.me/5547920020928" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-whatsapp"></i> (47) 92002-0928
+            </a>
+            <p>www.coldcode.com.br</p>
           </div>
         </section>
       </main>
 
       <footer className="footer">
-        © {new Date().getFullYear()} Cold Code Ltda. Todos os direitos reservados.
+        © {new Date().getFullYear()} Cold Code Ltda. Todos os direitos reservados.<br />
+        CNPJ: 60.470.117/0001-60
       </footer>
     </div>
   );
