@@ -1,7 +1,10 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import './LandingPage.css';
 
 import { services } from './services';
+import { FaGlobe, FaInstagram, FaWhatsapp } from "react-icons/fa";
+
+
 
 export default function LandingPage() {
   useEffect(() => {
@@ -151,20 +154,14 @@ export default function LandingPage() {
           <h2 className="section-title">Contato</h2>
           <p>Entre em contato e vamos juntos desenvolver a melhor solução para sua empresa.</p>
           <div className="contact-info">
-            <div>
-              <h3>Site</h3>
+            <div className="contact-item">
+              <h3><FaGlobe size={18} /> Site</h3>
               <p>www.coldcode.com.br</p>
             </div>
-            <div>
-              <h3>Instagram</h3>
+            <div className="contact-item">
+              <h3><FaInstagram size={18} /> Instagram</h3>
               <a href="https://instagram.com/coldcodeltda" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-instagram"></i> @coldcodeltda
-              </a>
-            </div>
-            <div>
-              <h3>WhatsApp</h3>
-              <a href="https://wa.me/5548988293408" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-whatsapp"></i> (48) 98829-3408
               </a>
             </div>
           </div>
@@ -175,6 +172,15 @@ export default function LandingPage() {
         © {new Date().getFullYear()} Cold Code Ltda. Todos os direitos reservados.<br />
         CNPJ: 60.470.117/0001-60
       </footer>
+
+      <a
+        href="https://wa.me/5548988293408"
+        className="whatsapp-float"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FaWhatsapp size={28} />
+      </a>
     </div>
   );
 }
