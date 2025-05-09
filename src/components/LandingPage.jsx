@@ -1,10 +1,31 @@
 import { useEffect } from "react";
 import './LandingPage.css';
-
+import { FaGlobe, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import { services } from './services';
-import { FaGlobe, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
-
+const contacts = [
+  {
+    id: 'site',
+    title: 'Site',
+    url: 'https://coldcode.com.br',
+    display: 'www.coldcode.com.br',
+    Icon: FaGlobe,
+  },
+  {
+    id: 'instagram',
+    title: 'Instagram',
+    url: 'https://instagram.com/coldcodeltda',
+    display: '@coldcodeltda',
+    Icon: FaInstagram,
+  },
+  {
+    id: 'whatsapp',
+    title: 'WhatsApp',
+    url: 'https://wa.me/5548988293408',
+    display: '(48) 98829-3408',
+    Icon: FaWhatsapp,
+  },
+];
 
 export default function LandingPage() {
   useEffect(() => {
@@ -72,17 +93,19 @@ export default function LandingPage() {
 
         <section id="sobre" className="section fade-in">
           <h2 className="section-title">Quem Somos</h2>
-          <p>
-            Na <strong>Cold Code Ltda</strong>, somos movidos pela paixão de transformar desafios em soluções digitais de alta performance. Reunimos uma equipe de especialistas em <strong>React</strong>, <strong>Node.js</strong> e <strong>TypeScript</strong> para criar plataformas web e APIs que combinam inovação, segurança e escalabilidade.
-          </p>
-          <br /><br />
-          <p>
-            Com um histórico comprovado em projetos robustos — como o e-commerce de alta demanda da Live! Moda Fitness, com checkout otimizado, omnichannel e notificações via WhatsApp, e a plataforma multiplataforma da banda Brasil Papaya, unindo afinador, decibelímetro, metrônomo e site institucional — entregamos soluções que suportam grande volume de usuários e crescem junto com seu negócio.
-          </p>
-          <br /><br />
-          <p>
-            Adotamos práticas sólidas de qualidade de código (testes automatizados, code review e monitoramento contínuo) e uma abordagem colaborativa, garantindo entregas rápidas sem comprometer a estabilidade. Nosso compromisso é entregar softwares sob medida, preparados para os desafios do mercado digital e orientados pelo sucesso dos nossos clientes.
-          </p>
+          <div className="about-content">
+            <p>
+              Na <strong>Cold Code Ltda</strong>, somos movidos pela paixão de transformar desafios em soluções digitais de alta performance. Reunimos uma equipe de especialistas em <strong>React</strong>, <strong>Node.js</strong> e <strong>TypeScript</strong> para criar plataformas web e APIs que combinam inovação, segurança e escalabilidade.
+            </p>
+            <br /><br />
+            <p>
+              Com um histórico comprovado em projetos robustos — como o e-commerce de alta demanda da Live! Moda Fitness, com checkout otimizado, omnichannel e notificações via WhatsApp, e a plataforma multiplataforma da banda Brasil Papaya, unindo afinador, decibelímetro, metrônomo e site institucional — entregamos soluções que suportam grande volume de usuários e crescem junto com seu negócio.
+            </p>
+            <br /><br />
+            <p>
+              Adotamos práticas sólidas de qualidade de código (testes automatizados, code review e monitoramento contínuo) e uma abordagem colaborativa, garantindo entregas rápidas sem comprometer a estabilidade. Nosso compromisso é entregar softwares sob medida, preparados para os desafios do mercado digital e orientados pelo sucesso dos nossos clientes.
+            </p>
+          </div>
         </section>
 
         <section id="servicos" className="section fade-in">
@@ -150,20 +173,29 @@ export default function LandingPage() {
           </div>
         </section>
 
-        <section id="contato" className="section fade-in">
+        <section id="contato" className="section contact-section fade-in">
           <h2 className="section-title">Contato</h2>
-          <p>Entre em contato e vamos juntos desenvolver a melhor solução para sua empresa.</p>
-          <div className="contact-info">
-            <div className="contact-item">
-              <h3><FaGlobe size={18} /> Site</h3>
-              <p>www.coldcode.com.br</p>
-            </div>
-            <div className="contact-item">
-              <h3><FaInstagram size={18} /> Instagram</h3>
-              <a href="https://instagram.com/coldcodeltda" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-instagram"></i> @coldcodeltda
+          <p>
+            Entre em contato e vamos juntos desenvolver a melhor solução para sua empresa.
+          </p>
+          <div className="contact-grid">
+            {contacts.map(info => (
+              <a
+                key={info.id}
+                className="contact-card"
+                href={info.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="icon-wrapper">
+                  <info.Icon size={24} />
+                </div>
+                <div className="text-wrapper">
+                  <h3>{info.title}</h3>
+                  <p>{info.display}</p>
+                </div>
               </a>
-            </div>
+            ))}
           </div>
         </section>
       </main>
@@ -181,6 +213,6 @@ export default function LandingPage() {
       >
         <FaWhatsapp size={28} />
       </a>
-    </div>
+    </div >
   );
 }
