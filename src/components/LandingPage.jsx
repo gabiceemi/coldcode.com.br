@@ -1,16 +1,7 @@
 import React, { useEffect } from "react";
 import './LandingPage.css';
 
-import { Code, Smartphone, Link, Lightbulb, LifeBuoy, Workflow } from "lucide-react";
-
-const services = [
-  { text: "Desenvolvimento de sistemas personalizados", icon: <Code /> },
-  { text: "Aplicações web e mobile", icon: <Smartphone /> },
-  { text: "Integrações com APIs e sistemas legados", icon: <Link /> },
-  { text: "Consultoria em tecnologia e inovação", icon: <Lightbulb /> },
-  { text: "Suporte e manutenção de software", icon: <LifeBuoy /> },
-  { text: "Aplicação de metodologias ágeis", icon: <Workflow /> }
-];
+import { services } from './services';
 
 export default function LandingPage() {
   useEffect(() => {
@@ -61,30 +52,33 @@ export default function LandingPage() {
 
       <main className="content">
         <section id="home" className="section home-section fade-in">
+          <div className="home-image">
+            <img src="/images/banner.png" alt="Cold Code - Tecnologia para empresas" />
+          </div>
+
           <div className="home-content">
             <h2 className="title typing-animation">Cold Code Ltda</h2>
             <p>
               Automatizamos processos e reduzimos custos com sistemas sob medida, criados para ajudar sua empresa a vender mais, economizar tempo e ter total controle sobre as operações.
             </p>
-            <button className="btn-primary">Converse com um Especialista</button>
-          </div>
-          <div className="home-image">
-            <img src="/images/banner.png" alt="Cold Code - Tecnologia para empresas" />
+            <a href="https://wa.me/5548988293408" target="_blank" rel="noopener noreferrer">
+              <button className="btn-primary">Converse com um Especialista</button>
+            </a>
           </div>
         </section>
 
         <section id="sobre" className="section fade-in">
           <h2 className="section-title">Quem Somos</h2>
           <p>
-            A <strong>Cold Code</strong> nasceu em <strong>São Joaquim, SC</strong>, no coração da <strong>Serra Catarinense</strong>, inspirada pelo frio intenso e pela força que ele representa. Assim como o clima da nossa terra, somos resilientes, precisos e determinados a entregar tecnologia que realmente faz a diferença.
+            Na <strong>Cold Code Ltda</strong>, somos movidos pela paixão de transformar desafios em soluções digitais de alta performance. Reunimos uma equipe de especialistas em <strong>React</strong>, <strong>Node.js</strong> e <strong>TypeScript</strong> para criar plataformas web e APIs que combinam inovação, segurança e escalabilidade.
           </p>
-          <br />
+          <br /><br />
           <p>
-            Com mais de 5 anos de experiência, ajudamos empresas de diferentes setores a simplificar processos, otimizar operações e crescer de forma sustentável. Nossa equipe é especializada em <strong>desenvolvimento de software sob medida</strong>, <strong>automação de processos</strong> e <strong>consultoria estratégica</strong>, sempre com foco em resultados práticos e duradouros.
+            Com um histórico comprovado em projetos robustos — como o e-commerce de alta demanda da Live! Moda Fitness, com checkout otimizado, omnichannel e notificações via WhatsApp, e a plataforma multiplataforma da banda Brasil Papaya, unindo afinador, decibelímetro, metrônomo e site institucional — entregamos soluções que suportam grande volume de usuários e crescem junto com seu negócio.
           </p>
-          <br />
+          <br /><br />
           <p>
-            Acreditamos que tecnologia de verdade é aquela que resolve problemas reais. Por isso, trabalhamos lado a lado com nossos clientes para entender suas dores e criar soluções robustas, eficientes e preparadas para os desafios do mercado digital.
+            Adotamos práticas sólidas de qualidade de código (testes automatizados, code review e monitoramento contínuo) e uma abordagem colaborativa, garantindo entregas rápidas sem comprometer a estabilidade. Nosso compromisso é entregar softwares sob medida, preparados para os desafios do mercado digital e orientados pelo sucesso dos nossos clientes.
           </p>
         </section>
 
@@ -117,9 +111,13 @@ export default function LandingPage() {
               <div className="project-info">
                 <h3>LIVE! Moda Fitness</h3>
                 <p>
-                  A Cold Code atuou no desenvolvimento de soluções digitais para a
-                  LIVE!, com checkout 3.0, integração de estoque, pagamentos
-                  personalizados, soluções omnichannel e entrega em tempo real.
+                  🛒 E-commerce & Checkout 3.0, painel administrativo e relatórios de vendas para gestão eficiente.
+                  <br /><br />
+                  🔔 Omnichannel com notificações via WhatsApp para lojas físicas.
+                  <br /><br />
+                  💳 Integração de Open Finance e split payment com PagBank.
+                  <br /><br />
+                  🌱 A solução elevou performance e experiência de compra, promovendo crescimento sustentável.
                 </p>
               </div>
             </a>
@@ -136,12 +134,13 @@ export default function LandingPage() {
                 className="project-image"
               />
               <div className="project-info">
-                <h3>Brasil Papaya</h3>
+                <h3>Banda Brasil Papaya</h3>
                 <p>
-                  Criamos o site institucional da <strong>Brasil Papaya</strong>, com
-                  foco em performance e acessibilidade. Também desenvolvemos um app
-                  exclusivo de afinador de notas para os músicos da banda, com design
-                  intuitivo e suporte multiplataforma.
+                  🎵 App Mobile com afinador de notas, decibelímetro e metrônomo, todos com interface intuitiva e performance nativa.
+                  <br /><br />
+                  🌐 Site Institucional para divulgação de álbuns, documentação sobre o app, agenda de shows e história da banda, tudo em layout moderno e responsivo.
+                  <br /><br />
+                  🤝 Projeto uniu tecnologia de ponta e design centrado no fã, permitindo à banda conectar-se de forma dinâmica e envolvente.
                 </p>
               </div>
             </a>
@@ -149,17 +148,25 @@ export default function LandingPage() {
         </section>
 
         <section id="contato" className="section fade-in">
-          <h2 className="section-title">Fale com a gente</h2>
+          <h2 className="section-title">Contato</h2>
           <p>Entre em contato e vamos juntos desenvolver a melhor solução para sua empresa.</p>
           <div className="contact-info">
-            <p>Santa Catarina</p>
-            <a href="https://instagram.com/coldcodeltda" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-instagram"></i> @coldcodeltda
-            </a>
-            <a href="https://wa.me/5547920020928" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-whatsapp"></i> (47) 92002-0928
-            </a>
-            <p>www.coldcode.com.br</p>
+            <div>
+              <h3>Site</h3>
+              <p>www.coldcode.com.br</p>
+            </div>
+            <div>
+              <h3>Instagram</h3>
+              <a href="https://instagram.com/coldcodeltda" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-instagram"></i> @coldcodeltda
+              </a>
+            </div>
+            <div>
+              <h3>WhatsApp</h3>
+              <a href="https://wa.me/5548988293408" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-whatsapp"></i> (48) 98829-3408
+              </a>
+            </div>
           </div>
         </section>
       </main>
