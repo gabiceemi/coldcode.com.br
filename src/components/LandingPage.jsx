@@ -1,17 +1,17 @@
 import './LandingPage.css';
 
-import { FaGlobe, FaInstagram, FaWhatsapp } from 'react-icons/fa';
+import { FaInstagram, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 
 import { services } from './services';
 import { useEffect } from "react";
 
 const contacts = [
   {
-    id: 'site',
-    title: 'Site',
-    url: 'https://coldcode.com.br',
-    display: 'www.coldcode.com.br',
-    Icon: FaGlobe,
+    id: 'linkedin',
+    title: 'LinkedIn',
+    url: 'https://www.linkedin.com/company/cold-code-ltda',
+    display: '@cold-code-ltda',
+    Icon: FaLinkedin,
   },
   {
     id: 'instagram',
@@ -83,12 +83,12 @@ export default function LandingPage() {
           </div>
 
           <div className="home-content">
-            <h2 className="title typing-animation">Cold Code Ltda</h2>
+            <h2 className="title typing-animation">Desenvolvimento de soluções digitais sob medida para seu projeto sair do papel.</h2>
             <p>
               Automatizamos processos e reduzimos custos com sistemas sob medida, criados para ajudar sua empresa a vender mais, economizar tempo e ter total controle sobre as operações.
             </p>
             <a href="https://wa.me/5548988293408" target="_blank" rel="noopener noreferrer">
-              <button className="btn-primary">Converse com um Especialista</button>
+              <button className="btn-primary">Solicitar orçamento grátis</button>
             </a>
           </div>
         </section>
@@ -97,16 +97,41 @@ export default function LandingPage() {
           <h2 className="section-title">Quem Somos</h2>
           <div className="about-content">
             <p>
-              Na <strong>Cold Code Ltda</strong>, somos movidos pela paixão de transformar desafios em soluções digitais de alta performance. Reunimos uma equipe de especialistas em <strong>React</strong>, <strong>Node.js</strong> e <strong>TypeScript</strong> para criar plataformas web e APIs que combinam inovação, segurança e escalabilidade.
+              Somos a Coldcode, um estúdio de desenvolvimento web e mobile especializado em transformar ideias em soluções digitais robustas.
             </p>
-            <br /><br />
+            <br />
             <p>
-              Com um histórico comprovado em projetos robustos — como o e-commerce de alta demanda da Live! Moda Fitness, com checkout otimizado, omnichannel e notificações via WhatsApp, e a plataforma multiplataforma da banda Brasil Papaya, unindo afinador, decibelímetro, metrônomo e site institucional — entregamos soluções que suportam grande volume de usuários e crescem junto com seu negócio.
+              Trabalhamos com as stacks mais modernas do mercado: TypeScript, React, Node.js, PHP, Cypress, Docker, PostgreSQL, Redis e Figma.
             </p>
-            <br /><br />
+            <br />
             <p>
-              Adotamos práticas sólidas de qualidade de código (testes automatizados, code review e monitoramento contínuo) e uma abordagem colaborativa, garantindo entregas rápidas sem comprometer a estabilidade. Nosso compromisso é entregar softwares sob medida, preparados para os desafios do mercado digital e orientados pelo sucesso dos nossos clientes.
+              Atuamos do planejamento ao deploy, entregando produtos escaláveis, performáticos e fáceis de manter.
             </p>
+          </div>
+
+          <div class="stacks-content">
+            <h2 className="section-title">Nossas Stacks</h2>
+            <div class="stack-track">
+              <img src="/icons/react.svg" alt="React" />
+              <img src="/icons/typescript.svg" alt="TypeScript" />
+              <img src="/icons/node-dot-js.svg" alt="Node.js" />
+              <img src="/icons/php.svg" alt="PHP" />
+              <img src="/icons/cypress.svg" alt="Cypress" />
+              <img src="/icons/docker.svg" alt="Docker" />
+              <img src="/icons/postgresql.svg" alt="PostgreSQL" />
+              <img src="/icons/redis.svg" alt="Redis" />
+              <img src="/icons/figma.svg" alt="Figma" />
+
+              <img src="/icons/react.svg" alt="React" />
+              <img src="/icons/typescript.svg" alt="TypeScript" />
+              <img src="/icons/node-dot-js.svg" alt="Node.js" />
+              <img src="/icons/php.svg" alt="PHP" />
+              <img src="/icons/cypress.svg" alt="Cypress" />
+              <img src="/icons/docker.svg" alt="Docker" />
+              <img src="/icons/postgresql.svg" alt="PostgreSQL" />
+              <img src="/icons/redis.svg" alt="Redis" />
+              <img src="/icons/figma.svg" alt="Figma" />
+            </div>
           </div>
         </section>
 

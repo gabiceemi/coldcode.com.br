@@ -295,6 +295,39 @@ body {
   max-width: 800px;
   text-align: justify;
 }
+.stacks-content {
+  text-align: center;
+  padding: 4rem 0;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.stacks-content h2 {
+  margin-bottom: 2rem;
+}
+
+.stack-track {
+  display: flex;
+  gap: 4rem;
+  animation: scroll 20s linear infinite;
+}
+
+.stack-track img {
+  height: 50px;
+  width: auto;
+  color: var(--primary-color);
+  flex-shrink: 0;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 
 .footer {
   background-color: var(--primary-color);
