@@ -1,7 +1,9 @@
-import { useEffect } from "react";
 import './LandingPage.css';
+
 import { FaGlobe, FaInstagram, FaWhatsapp } from 'react-icons/fa';
+
 import { services } from './services';
+import { useEffect } from "react";
 
 const contacts = [
   {
@@ -124,6 +126,81 @@ export default function LandingPage() {
           <h2 className="section-title">Clientes</h2>
           <div className="project-grid">
             <a
+              href="http://medcloud.link"
+              className="client-card"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/images/judite-desktop.jpeg"
+                alt="Sistema Judite"
+                className="project-image"
+              />
+              <div className="project-info">
+                <h3>Judite</h3>
+                <p>
+                  🏥 Plataforma web para gestão de clínicas, pacientes e profissionais.
+                  <br /><br />
+                  🗂️ Cadastro de pacientes e profissionais de forma simples e organizada.
+                  <br /><br />
+                  📅 Agendamento de consultas e gerenciamento de horários.
+                  <br /><br />
+                  🚀 Base sólida para expansão de novos módulos de saúde.
+                </p>
+              </div>
+            </a>
+
+            <a
+              href="#"
+              className="client-card"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/images/bingo-desktop.jpeg"
+                alt="Bingo Joaquinenese"
+                className="project-image"
+              />
+              <div className="project-info">
+                <h3>Bingo Joaquinenese</h3>
+                <p>
+                  🎉 Aplicativo online para venda e compra de cartelas de bingo.
+                  <br /><br />
+                  💸 Sistema seguro de pagamento e emissão de cartelas digitais.
+                  <br /><br />
+                  📺 Rodada de bingo transmitida em TVs de estabelecimentos parceiros.
+                  <br /><br />
+                  🔄 Sorteio automatizado para partidas justas e dinâmicas.
+                </p>
+              </div>
+            </a>
+
+            <a
+              href="#"
+              className="client-card"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/images/aries-desktop.jpeg"
+                alt="Aries Eventos"
+                className="project-image"
+              />
+              <div className="project-info">
+                <h3>Aries Eventos</h3>
+                <p>
+                  🏃 Plataforma responsiva para inscrições em corridas, meias maratonas e triatlos.
+                  <br /><br />
+                  📄 Formulários personalizados para cadastro de atletas e pagamento online.
+                  <br /><br />
+                  📊 Painel administrativo para controle de inscritos e relatórios.
+                  <br /><br />
+                  🌐 Layout moderno, intuitivo e adaptável em qualquer tela.
+                </p>
+              </div>
+            </a>
+
+            <a
               href="https://www.liveoficial.com.br"
               className="client-card"
               target="_blank"
@@ -167,6 +244,31 @@ export default function LandingPage() {
                   🌐 Site Institucional para divulgação de álbuns, documentação sobre o app, agenda de shows e história da banda, tudo em layout moderno e responsivo.
                   <br /><br />
                   🤝 Projeto uniu tecnologia de ponta e design centrado no fã, permitindo à banda conectar-se de forma dinâmica e envolvente.
+                </p>
+              </div>
+            </a>
+
+            <a
+              href="http://calcmed.com.br"
+              className="client-card"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/images/calcmed-desktop.jpeg"
+                alt="Projeto CalcMed"
+                className="project-image"
+              />
+              <div className="project-info">
+                <h3>CalcMed</h3>
+                <p>
+                  🧮 Ferramenta online para cálculos médicos rápidos e precisos.
+                  <br /><br />
+                  🩺 Focado em profissionais de saúde para apoiar decisões clínicas.
+                  <br /><br />
+                  📱 Interface responsiva, fácil de usar em qualquer dispositivo.
+                  <br /><br />
+                  ⚙️ Estrutura flexível para novos cálculos e atualizações.
                 </p>
               </div>
             </a>
