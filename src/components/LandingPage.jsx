@@ -66,7 +66,7 @@ export default function LandingPage() {
         <nav className="nav-links">
           <a href="#sobre">Sobre</a>
           <a href="#servicos">Serviços</a>
-          <a href="#clientes">Clientes</a>
+          {/* <a href="#clientes">Clientes</a> */}
           <a href="#contato">Contato</a>
         </nav>
         <button className="menu-toggle" onClick={() => {
@@ -147,7 +147,7 @@ export default function LandingPage() {
           </div>
         </section>
 
-        <section id="clientes" className="section fade-in">
+        {/* <section id="clientes" className="section fade-in">
           <h2 className="section-title">Clientes</h2>
           <div className="project-grid">
             <a
@@ -298,7 +298,7 @@ export default function LandingPage() {
               </div>
             </a>
           </div>
-        </section>
+        </section> */}
 
         <section id="contato" className="section contact-section fade-in">
           <h2 className="section-title">Contato</h2>
